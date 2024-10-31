@@ -30,15 +30,17 @@ def getUnion(list1, list2):
     union = sorted(union)
     return union
 
-def getMerge(list1, list2):
-    result = list(list1) if isinstance(list1, tuple) else list1
+def getMerge(list1,list2):
+   
+    list1 = list(list1) if type(list1) is tuple else list1
     for i in list2:
-        if i in result:
-            index = result.index(i)
-            result.insert(index + 1, i)
+        if i in list1:
+            index = list1.index(i)
+            list1.insert(index + 1, i)
         else:
-            result.append(i)
-    return tuple(result) if isinstance(list1, tuple) else result
+            list1.append(i)
+    list1 = tuple(list1) if type(list1) is tuple else list1
+    return list1
 
 
 
