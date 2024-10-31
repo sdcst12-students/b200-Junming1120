@@ -7,7 +7,7 @@ def getIntegers(myList):
 
 
 def getFactor(myList, number):
-    factors = [i for i in myList if number % i == 0]
+    factors = [i for i in myList if (i != 0 and number % i == 0)]
     return factors
 
 
@@ -30,6 +30,15 @@ def getUnion(list1, list2):
     union = sorted(union)
     return union
 
+def getMerge(list1, list2):
+    result = list(list1) if isinstance(list1, tuple) else list1
+    for i in list2:
+        if i in result:
+            index = result.index(i)
+            result.insert(index + 1, i)
+        else:
+            result.append(i)
+    return tuple(result) if isinstance(list1, tuple) else result
 
 
 
