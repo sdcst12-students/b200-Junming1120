@@ -30,14 +30,7 @@ def getUnion(list1, list2):
     union = sorted(union)
     return union
 
-def getMerge(list1,list2):
-    # list 1: expected list or tuple
-    # list 2: expected list or tuple
-    # add the elements of list2 into list1
-    # if the list2 element is in list1, add it at the position where it occurs in list1
-    # if the list2 element is not in list1, add it to the end
 
-    return list1
 
 
 def main():
